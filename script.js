@@ -1,24 +1,21 @@
 const btn = document.querySelector('#btnAdd')
 const titulo = document.querySelector('h3')
-const secao = document.querySelector('.anotado')
+const secao = document.querySelector('.notas')
+const formulario = document.querySelector('.formulario')
 
-// =========================================Links=========================================
-const link1 = document.querySelector('#link1')
-const link2 = document.querySelector('#link2')
-const link3 = document.querySelector('#link3')
-const link4 = document.querySelector('#link4')
- 
-const linksId = [link1 , link2 , link3, link4]
-const listaLinks = document.querySelector('.lista')
+// =========================================PASTAS=========================================
+const pasta1 = document.querySelector('#link1')
+const pasta2 = document.querySelector('#link2')
+const pasta3 = document.querySelector('#link3')
+const pasta4 = document.querySelector('#link4')
 
-// =========================================Criando Anotação =========================================
-const listaAnotacoes = [] 
-let id = 0
+// =========================================INICIANDO ANOTAÇÃO=========================================
+
 const tituloNota = document.querySelector('#titulo')
 const nota = document.querySelector('#anotacao')
 
 btn.addEventListener('click', addNovaNota)
-const formulario = document.querySelector('.formulario')
+
 function addNovaNota(){
     
     formulario.classList.remove('esconder')
@@ -27,11 +24,17 @@ function addNovaNota(){
     salvar.addEventListener('click' , salvarNota)
 
 }
+// =========================================SALVANDO INFORMAÇÕES=========================================
 
+let id = 0
 function salvarNota (){
     formulario.classList.add('esconder')
     const titulo = tituloNota.value 
     const anotacao = nota.value 
+
+    if (titulo.typeof == null) {
+       
+    }
 
     const novaNota = {
         id: id,
@@ -43,8 +46,16 @@ function salvarNota (){
     listaAnotacoes.push(novaNota)
 
     redenrizarLayout()
+
+    tituloNota.value = ""
+    nota.value = ""
+
+    console.log(listaAnotacoes)
 }
 
+// =========================================CONSTRUINDO LAYOUT=========================================
+
+const listaAnotacoes = [] 
 function redenrizarLayout(){
     secao.innerHTML = ''
 
@@ -57,10 +68,11 @@ function redenrizarLayout(){
     }
 }
 redenrizarLayout()
-// =========================================Criando template=========================================
+// =========================================CRIANDO TEMPLATE=========================================
 function criarTemplate (anotacao){
-    const template = document.createElement('div')
+    const template = document.createElement('section')
     template.classList.add('formulario__info')
+
     const div = document.createElement('div')
     const input = document.createElement('input')
     const btn = document.createElement('button')
@@ -68,7 +80,7 @@ function criarTemplate (anotacao){
    
     btn.innerText = 'X'
     btn.id = "remover"
-    //btn.addEventListener('click' , removerNota)
+    btn.addEventListener('click' , removerNota)
 
     template.dataset.id = anotacao.id
     input.value = anotacao.nome
@@ -79,11 +91,28 @@ function criarTemplate (anotacao){
     template.append(div , text)
    
     secao.appendChild(template)
-    console.log(secao)
 }
-// =========================================Abrindo Pasta=========================================
-listaLinks.addEventListener('click' , abrirPasta)
 
+// =========================================REMOVENDO=========================================
+
+function removerNota (event){
+    const btnClicado = event.target
+    const notaClicada = btnClicado.closest('section')
+    const idNotaClick = notaClicada.dataset.id
+
+    const notaRemovida = listaAnotacoes.find((novaNota) => novaNota.id == idNotaClick)
+    const posicaoRemovida = listaAnotacoes.indexOf(notaRemovida)
+
+    listaAnotacoes.splice(posicaoRemovida, 1)
+
+    redenrizarLayout()
+    console.log(listaAnotacoes)
+}
+
+// =========================================SELECIONADO PASTA=========================================
+const listaLinks = document.querySelector('.lista')
+listaLinks.addEventListener('click' , abrirPasta)
+const linksId = [pasta1 , pasta2 , pasta3, pasta4]
 function abrirPasta(event){
     const link = event.target
 
@@ -96,7 +125,5 @@ function abrirPasta(event){
            console.log(linkEscolhido)
            titulo.innerText = linkEscolhido.innerText
     }
-
-    
     
 }
