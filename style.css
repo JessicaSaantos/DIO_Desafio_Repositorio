@@ -1,0 +1,9 @@
+.formulario{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.formulario__info {
+    display: grid;
+
+}
