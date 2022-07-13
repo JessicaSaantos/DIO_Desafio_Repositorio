@@ -9,7 +9,7 @@ body{
 header{
     text-align: center;
 }
-button {
+#btnAdd{
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -27,7 +27,8 @@ button {
 }
 
 .anotado {
-    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .formulario__info {
     display: grid;
