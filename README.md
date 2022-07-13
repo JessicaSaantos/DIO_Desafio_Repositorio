@@ -1,2 +1,2 @@
-# DIO_Desafio_Repositorio
-Desafio de projeto sobre Git/GitHub
+# Desafio de Repositorio
+Desafio de projeto proposto pela Digital Innovation One no curso de Git/GitHub.
