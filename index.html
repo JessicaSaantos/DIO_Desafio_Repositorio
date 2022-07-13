@@ -9,18 +9,50 @@
 </head>
 <body>
 
-    <h1>StudyNotes</h1>
-    <h3>Adicione sua anotação de estudo</h3>
-    <button>+</button>
+    <header>
+        <h1>StudyNotes</h1>
+        <h3>Adicione sua anotação de estudo</h3>
+        <button id="btnAdd">+</button>
+    </header>
+    
 
-        <section class="formulario">
+        <section class="formulario esconder" >
+            <div class="formulario__info">
+                <input id="Título" placeholder="Título">
+                <textarea id="anotacao" cols="40" rows="10"></textarea>
+                <input type="submit" name="salvar" id="salvar" value="Salvar">
+            </div>
+            
+        </section>
+
+        <section class="anotado">
+            
             <div class="formulario__info">
                 <input id="Título" placeholder="Título">
                 <textarea id="anotacao" cols="30" rows="5"></textarea>
-                <input type="text" name="salvar" id="salvar" value="Salvar">
+                <input type="submit" name="salvar" id="salvar" value="Salvar">
+            </div>
+            <div class="formulario__info">
+                <input id="Título" placeholder="Título">
+                <textarea id="anotacao" cols="30" rows="5"></textarea>
+                <input type="submit" name="salvar" id="salvar" value="Salvar">
+            </div>
+            <div class="formulario__info">
+                <input id="Título" placeholder="Título">
+                <textarea id="anotacao" cols="30" rows="5"></textarea>
+                <input type="submit" name="salvar" id="salvar" value="Salvar">
             </div>
         </section>
 
+        <section>
+            <ul>
+                <li class="link1">Módulo 1 - Princípios de Desenvolvimento de Software</li>
+                <li class="link2">Módulo 2 - Começando a programar em Java</a></li>
+                <li class="link3">Módulo 3 - Dominando o Java</a></li>
+            </ul>
+        </section>
+
+        <script src="script.js"></script>
     
 </body>
 </html>
