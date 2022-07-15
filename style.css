@@ -11,6 +11,7 @@ body{
     height: 100vh;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 header{
     text-align: center;
@@ -37,17 +38,12 @@ header{
 .notas {
     justify-content: center;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    padding: 35px;
 }
 .formulario__info {
     display: grid;
 }
 
-input {
-    text-align: center;
-}
 
-section {
-    display: flex;
-    justify-content: flex-start;
-    padding: 35px;
-}

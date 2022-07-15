@@ -20,10 +20,9 @@ function cancelar() {
 }
 
 // =========================================SALVANDO INFORMAÇÕES=========================================
-
+const listaAnotacoes = [] 
 const tituloNota = document.querySelector('#titulo')
 const nota = document.querySelector('#anotacao')
-let id = 0
 function salvarNota (){
     
     formulario.classList.add('esconder')
@@ -35,12 +34,11 @@ function salvarNota (){
        
     } else {
         const novaNota = {
-            id: id,
+            id: new Date().getTime(),
             nome: titulo,
             nota: anotacao
         }
     
-        id++
         listaAnotacoes.push(novaNota)
     
         redenrizarLayout()
@@ -55,12 +53,11 @@ function salvarNota (){
 
 // =========================================CONSTRUINDO LAYOUT=========================================
 
-const listaAnotacoes = [] 
 function redenrizarLayout(){
     secao.innerHTML = ''
 
     if (listaAnotacoes.length == 0){
-        secao.innerHTML = '<div><p>Não há anotações nesta pasta</p></div>'
+        secao.innerHTML = '<li>Não há anotações nesta pasta</li>'
     } else {
         for(i = 0 ; i < listaAnotacoes.length; i++){
             criarTemplate(listaAnotacoes[i])
@@ -70,13 +67,16 @@ function redenrizarLayout(){
 redenrizarLayout()
 // =========================================CRIANDO TEMPLATE=========================================
 function criarTemplate (anotacao){
-    const template = document.createElement('section')
+    const template = document.createElement('li')
     template.classList.add('formulario__info')
-
+    
     const div = document.createElement('div')
     const input = document.createElement('input')
     const btn = document.createElement('button')
+    
     const text = document.createElement('textarea')
+    text.setAttribute("cols" , "20")
+    text.setAttribute("rows" , "8")
    
     btn.innerText = 'X'
     btn.id = "remover"
@@ -89,15 +89,17 @@ function criarTemplate (anotacao){
 
     div.append(input , btn)
     template.append(div , text)
-   
+    
     secao.appendChild(template)
+    console.log(template) 
 }
+
 
 // =========================================REMOVENDO=========================================
 
 function removerNota (event){
     const btnClicado = event.target
-    const notaClicada = btnClicado.closest('section')
+    const notaClicada = btnClicado.closest('li')
     const idNotaClick = notaClicada.dataset.id
 
     const notaRemovida = listaAnotacoes.find((novaNota) => novaNota.id == idNotaClick)
@@ -107,5 +109,3 @@ function removerNota (event){
 
     redenrizarLayout()
 }
-
-
