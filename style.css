@@ -24,6 +24,7 @@ header{
     border-radius: 50%;
     color: white;
     background-color: black;
+    cursor: pointer;
 }
 .esconder {
     display: none;
@@ -44,6 +45,10 @@ header{
 }
 .formulario__info {
     display: grid;
+}
+.formulario__info textarea::-webkit-scrollbar{
+    resize: none;
+    display: none;
 }
 
 

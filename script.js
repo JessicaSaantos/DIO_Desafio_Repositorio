@@ -1,5 +1,4 @@
 const btn = document.querySelector('#btnAdd')
-const titulo = document.querySelector('h3')
 const secao = document.querySelector('.notas')
 const formulario = document.querySelector('.formulario')
 
@@ -20,9 +19,16 @@ function cancelar() {
 }
 
 // =========================================SALVANDO INFORMAÇÕES=========================================
-const listaAnotacoes = [] 
+// if(localStorage.listChave){
+//     listaAnotacoes = JSON.parse(localStorage.getItem('listChave'))
+//     salvarNota()
+// }
+
+
+let listaAnotacoes = [] 
 const tituloNota = document.querySelector('#titulo')
 const nota = document.querySelector('#anotacao')
+
 function salvarNota (){
     
     formulario.classList.add('esconder')
@@ -37,7 +43,12 @@ function salvarNota (){
             id: new Date().getTime(),
             nome: titulo,
             nota: anotacao
+            
         }
+    
+    if(localStorage.listChave){
+        listaAnotacoes = JSON.parse(localStorage.getItem('listChave'))
+    }
     
         listaAnotacoes.push(novaNota)
     
@@ -45,6 +56,8 @@ function salvarNota (){
     
         tituloNota.value = ""
         nota.value = ""
+
+        localStorage.listChave = JSON.stringify(listaAnotacoes)
     
     }
 
@@ -70,10 +83,10 @@ function criarTemplate (anotacao){
     const template = document.createElement('li')
     template.classList.add('formulario__info')
     
+
     const div = document.createElement('div')
     const input = document.createElement('input')
     const btn = document.createElement('button')
-    
     const text = document.createElement('textarea')
     text.setAttribute("cols" , "20")
     text.setAttribute("rows" , "8")
@@ -108,4 +121,10 @@ function removerNota (event){
     listaAnotacoes.splice(posicaoRemovida, 1)
 
     redenrizarLayout()
+    salvarLocal()
+}
+
+function salvarLocal (){
+    localStorage.setItem('listChave' , JSON.stringify(listaAnotacoes))
+    
 }
