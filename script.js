@@ -75,6 +75,7 @@ function redenrizarLayout(){
 function criarTemplate (anotacao){
     const template = document.createElement('li')
     template.classList.add('formulario__info')
+    template.setAttribute("ondblclick" , "ampliarNota(event)")
 
     const div = document.createElement('div')
     const input = document.createElement('input')
@@ -83,7 +84,8 @@ function criarTemplate (anotacao){
 
     const text = document.createElement('textarea')
     text.setAttribute("rows" , "8")
-    text.setAttribute('disabled' , "true")
+    text.setAttribute('disabled' , "true");
+    
 
    
     btn.innerText = 'X'
@@ -121,5 +123,20 @@ function removerNota (event){
 
 function salvarLocal (){
     localStorage.setItem('listChave' , JSON.stringify(listaAnotacoes))
+    
+}
+
+// =========================================AMPLIANDO=========================================
+
+function ampliarNota(event){
+    const textClicado = event.target
+    const notaClicada = textClicado.closest('li')
+    const textArea = notaClicada.querySelector('textarea')
+    
+    textArea.setAttribute("rows" , "10")
+    textArea.setAttribute("cols" , "40")
+    
+    notaClicada.classList.add('formulario')
+    notaClicada.setAttribute("ondblclick" , "location.reload()")
     
 }

@@ -26,14 +26,18 @@ header{
     gap: 20px;
     justify-content: center;
 }
+h1 span {
+    color: rgb(255 179 38 / 85%);
+}
 #btnAdd{
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #8ff795;
     cursor: pointer;
     margin: 0 auto;
+    border: none;
 }
 /*==============NOTA PRINCIPAL==============*/
 #titulo {
