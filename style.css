@@ -16,8 +16,35 @@ body{
 header{
     text-align: center;
     padding: 40px;
+    outline: none;
+    border: none;
 }
-
+#titulo {
+    border: none;
+    font-size: 20px;
+    padding: 4px;
+    margin-bottom: 3px;
+    outline: none;
+}
+#anotacao{
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
+#salvar {
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: green;
+    background: wheat;
+    border-radius: 12px;
+    box-shadow: 3px 3px #838383;
+    border: none;
+}
+.formulario__info div {
+    display: flex;
+    justify-content: space-between;
+}
 #btnAdd{
     width: 60px;
     height: 60px;
@@ -42,7 +69,10 @@ header{
     justify-content: center;
 }
 .notas li {
-    margin: .3rem;
+    margin: 0.3rem;
+    background: wheat;
+    padding: 5px;
+    border-radius: 10px;
 }
 .notas li input {
     font-family: Arial, Helvetica, sans-serif;
@@ -61,14 +91,21 @@ header{
     line-height: 24px;
     border-radius: 5px
 }
-.notas li button {
+.notas li button , .formulario__info button{
     padding: 5px;
+    background: #ff3c3ceb;
     border: none;
     border-radius: 8px;
     margin: 2px;
+    color: white;
+}
+.formulario__info button {
+    width: 30px;
 }
 .formulario__info {
     display: grid;
+    background: wheat;
+    padding: 8px;
 }
 .formulario__info textarea::-webkit-scrollbar{
     resize: none;
@@ -78,7 +115,7 @@ header{
 
 @media (max-width:600px) {
     .notas li textarea{
-        width: 160px;
+        width: 180px;
         height: 190px;
         
     }
