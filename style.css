@@ -45,20 +45,27 @@ header{
     margin: .3rem;
 }
 .notas li input {
-    width: 145px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 600;
-    background-color: rgba(245, 222, 179, 0.878);
+    background-color: rgba(255, 209, 124, 0.878);
+    border: none;
+    padding: 2px;
+    border-radius: 5px;
 }
 .notas li textarea{
-    width: 160px;
-    height: 190px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    background-color: rgba(245, 222, 179, 0.878);
+    background-color: rgba(238, 183, 81, 0.847);
     color: black;
     line-height: 24px;
+    border-radius: 5px
+}
+.notas li button {
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    margin: 2px;
 }
 .formulario__info {
     display: grid;
@@ -68,4 +75,16 @@ header{
     display: none;
 }
 
+
+@media (max-width:600px) {
+    .notas li textarea{
+        width: 160px;
+        height: 190px;
+        
+    }
+    .notas li input {
+        width: 145px;
+        
+    }
+}
 
