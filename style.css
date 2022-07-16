@@ -1,3 +1,4 @@
+/*==============GERAL==============*/
 *{
  list-style: none;
  margin: 0;
@@ -13,12 +14,28 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     
 }
+
+.esconder {
+    display: none;
+}
+/*==============CABEÇALHO==============*/
 header{
     text-align: center;
     padding: 40px;
-    outline: none;
-    border: none;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
 }
+#btnAdd{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    margin: 0 auto;
+}
+/*==============NOTA PRINCIPAL==============*/
 #titulo {
     border: none;
     font-size: 20px;
@@ -38,23 +55,8 @@ header{
     color: green;
     background: wheat;
     border-radius: 12px;
-    box-shadow: 3px 3px #838383;
+    box-shadow: 4px 3px 2px #838383;
     border: none;
-}
-.formulario__info div {
-    display: flex;
-    justify-content: space-between;
-}
-#btnAdd{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    color: white;
-    background-color: black;
-    cursor: pointer;
-}
-.esconder {
-    display: none;
 }
 .formulario{
     position: absolute;
@@ -62,7 +64,24 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+.formulario__info {
+    display: grid;
+    background: wheat;
+    padding: 8px;
+}
+.formulario__info div {
+    display: flex;
+    justify-content: space-between;
+}
+.formulario__info textarea::-webkit-scrollbar{
+    width: 3px;
+    background-color: white;
+}
+.formulario__info textarea::-webkit-scrollbar-thumb{
+    border-radius: 30px;  
+    background-color: orange;
+}
+/*==============LISTA DE ANOTAÇÕES==============*/
 .notas {
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +108,8 @@ header{
     background-color: rgba(238, 183, 81, 0.847);
     color: black;
     line-height: 24px;
-    border-radius: 5px
+    border-radius: 5px;
+    resize: none;
 }
 .notas li button , .formulario__info button{
     padding: 5px;
@@ -99,18 +119,7 @@ header{
     margin: 2px;
     color: white;
 }
-.formulario__info button {
-    width: 30px;
-}
-.formulario__info {
-    display: grid;
-    background: wheat;
-    padding: 8px;
-}
-.formulario__info textarea::-webkit-scrollbar{
-    resize: none;
-    display: none;
-}
+
 
 
 @media (max-width:600px) {

@@ -64,7 +64,7 @@ function redenrizarLayout(){
     secao.innerHTML = ''
 
     if (listaAnotacoes.length == 0){
-        secao.innerHTML = '<li>Ainda não há anotações de estudo</li>'
+        secao.innerHTML = '<p>Ainda não há anotações de estudo</p>'
     } else {
         for(i = 0 ; i < listaAnotacoes.length; i++){
             criarTemplate(listaAnotacoes[i])
