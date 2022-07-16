@@ -39,6 +39,12 @@ h1 span {
     margin: 0 auto;
     border: none;
 }
+#btnAdd img {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    margin: auto;
+}
 /*==============NOTA PRINCIPAL==============*/
 #titulo {
     border: none;
