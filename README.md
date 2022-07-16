@@ -1,4 +1,4 @@
-![studyNotes-banner](https://user-images.githubusercontent.com/98659450/179371608-7b2633d5-8377-4542-99ac-9402983d4740.png)
+![studyNotes-Banner](https://user-images.githubusercontent.com/98659450/179371893-448d633a-fc32-4c64-9fc2-7d998849d1c2.png)
 
 ***
 <div align="center">
