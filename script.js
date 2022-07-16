@@ -82,7 +82,6 @@ function criarTemplate (anotacao){
     const btn = document.createElement('button')
 
     const text = document.createElement('textarea')
-    text.setAttribute("cols" , "20")
     text.setAttribute("rows" , "8")
     text.setAttribute('disabled' , "true")
 
