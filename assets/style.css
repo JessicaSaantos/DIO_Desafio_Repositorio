@@ -40,8 +40,8 @@ h1 span {
     border: none;
 }
 #btnAdd img {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     display: flex;
     margin: auto;
 }
@@ -133,7 +133,7 @@ h1 span {
 
 
 @media (max-width:600px) {
-    .notas li textarea{
+    .notas li .text{
         width: 180px;
         height: 190px;
         

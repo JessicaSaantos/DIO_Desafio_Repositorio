@@ -83,6 +83,7 @@ function criarTemplate (anotacao){
     const btn = document.createElement('button')
 
     const text = document.createElement('textarea')
+    text.setAttribute("class" , "text")
     text.setAttribute("rows" , "8")
     text.setAttribute('disabled' , "true");
     
@@ -133,8 +134,10 @@ function ampliarNota(event){
     const notaClicada = textClicado.closest('li')
     const textArea = notaClicada.querySelector('textarea')
     
-    textArea.setAttribute("rows" , "12")
-    textArea.setAttribute("cols" , "48")
+    textArea.setAttribute("rows" , "10")
+    textArea.setAttribute("cols" , "40")
+    textArea.classList.remove('text')
+    notaClicada.style.width = '350px'
     
     notaClicada.classList.add('formulario')
     notaClicada.setAttribute("ondblclick" , "location.reload()")
