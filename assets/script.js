@@ -135,9 +135,8 @@ function ampliarNota(event){
     const textArea = notaClicada.querySelector('textarea')
     
     textArea.setAttribute("rows" , "10")
-    textArea.setAttribute("cols" , "40")
     textArea.classList.remove('text')
-    notaClicada.style.width = '350px'
+    notaClicada.style.width = '345px'
     
     notaClicada.classList.add('formulario')
     notaClicada.setAttribute("ondblclick" , "location.reload()")

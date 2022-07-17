@@ -12,7 +12,7 @@
 ***
 # StudyNotes
 ## Descrição: 
-<p>Desafio de projeto proposto pela Digital Innovation One no curso de Git/GitHub. Idéia principal deste projeto é uma ferramenta que auxilia nos estudos, permitindo ter um ambiente de anotações para os estudos.</p>
+<p>Desafio proposto pela Digital Innovation One no curso de Git/GitHub. Idéia principal deste projeto é uma ferramenta que auxilia nos estudos, permitindo ter um ambiente de anotações para salvar conteúdos de pesquisas e aprendizados.</p>
 
  ### Tecnologias Utilizadas:
  ![GitHub language count](https://img.shields.io/github/languages/count/JessicaSaantos/Desafio-DIO?style=plastic)
@@ -24,10 +24,14 @@ Html | Css | JavaScript
 5 | 3 | ECMAScript 2018
 
 ### Aprendizados: 
+***
+    Neste projeto foi possível exercitar o uso do JavaScript para armazenar as informações necessárias que o usuário escolhe salvar, com uso de objeto, assim com método push já adicionado a nova nota dentro de um Array. Em seguida chamando a função para desenvolver o layout da nota com as informações armazenadas, usando loop para percorrer o Array e criar uma nota para cada item na lista.
+    
+    Logo após já organizando de forma dinâmica a estrutura HTML, através do uso do DOM criando elementos e adicionando atribuições e usando método appenChild para adicionar a estrutura HTML no lugar necessário para apresentar o layout criado com as informações salvas da nova nota adicionada. Também usando ouvidor addEventListener para capturar o click e com uso do evento identificar a posição do Click tornando possível remover a nota tanto do layout como do array. 
 
-    <p>Neste projeto foi possível exercitar..</p>
-    <p></p>
-    <p></p>
+    Além disso o diferencial deste projeto é o uso do método localStorage que consiste em salvar, recuperar ou excluir dados localmente em um navegador, esta informação é guardada na forma de pares de chave-valor e os valores podem ser apenas strings, assim tornado possível salvar as informações do Array que armazena as notas. Por fim uma última funcionalidade de centralizar e ampliar alguma nota específica com intuito de ter uma experiência melhor de leitura. 
+
+    
 ### O Projeto:
 #### Estrutura de arquivos
 
