@@ -133,7 +133,9 @@ function ampliarNota(event){
     const textClicado = event.target
     const notaClicada = textClicado.closest('li')
     const textArea = notaClicada.querySelector('textarea')
-    
+    const titulo = notaClicada.querySelector('input')
+
+    titulo.style.width = '300px'
     textArea.setAttribute("rows" , "10")
     textArea.classList.remove('text')
     notaClicada.style.width = '345px'

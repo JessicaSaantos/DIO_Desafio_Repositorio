@@ -105,7 +105,7 @@ h1 span {
 }
 .notas li input {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     background-color: rgba(255, 209, 124, 0.878);
     border: none;
@@ -114,7 +114,7 @@ h1 span {
 }
 .notas li textarea{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     background-color: rgba(238, 183, 81, 0.847);
     color: black;
     line-height: 24px;
