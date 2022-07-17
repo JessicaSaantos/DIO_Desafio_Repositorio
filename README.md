@@ -1,7 +1,5 @@
 ![studyNotes-Banner](https://user-images.githubusercontent.com/98659450/179372037-b17838a9-836f-4666-b9a8-c161d2775008.png)
 
-
-***
 <div align="center">
 
  [![](https://img.shields.io/badge/🔗-Sobre-blue)](#Descrição) • [![](https://img.shields.io/badge/🔗-Tecnologias%20Utilizadas-blue)](#Tecnologias-Utilizadas) • [![](https://img.shields.io/badge/🔗-Objetivos-blue)](#Aprendizados) • [![](https://img.shields.io/badge/🔗-O%20Projeto-blue)](#O-Projeto) •  
