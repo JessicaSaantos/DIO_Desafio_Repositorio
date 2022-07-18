@@ -51,3 +51,4 @@ Objetivo principal do projeto está finalizado. Mas outras funcionalidades serã
  - [ ] Funcionalidade de Pesquisar
  ### Demonstração: 
  🎥📷
+![Animação](https://user-images.githubusercontent.com/98659450/179570880-06505831-9812-490c-bbc8-c429c13892b0.gif)
