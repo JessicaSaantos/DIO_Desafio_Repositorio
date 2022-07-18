@@ -51,4 +51,8 @@ Objetivo principal do projeto está finalizado. Mas outras funcionalidades serã
  - [ ] Funcionalidade de Pesquisar
  ### Demonstração: 
  🎥📷
+
 ![Animação](https://user-images.githubusercontent.com/98659450/179570880-06505831-9812-490c-bbc8-c429c13892b0.gif)
+
+Para ver o funcionamento é só clicar [aqui](https://jessicasaantos.github.io/Desafio-DIO/)
+Para extrair o arquivo e trabalhar com o código é bom ter um editor como VSCode por exemplo.
